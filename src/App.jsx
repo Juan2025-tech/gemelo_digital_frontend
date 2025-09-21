@@ -7,7 +7,8 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { Heart, Thermometer, Wifi, Battery, AlertTriangle, CheckCircle } from 'lucide-react'
 import './App.css'
 
-const API_BASE_URL = "http://localhost:5001";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5001"
+
 
 function App() {
   const [data, setData] = useState([])
